@@ -18,6 +18,8 @@ const bookedSeatInfo = document.getElementById('booked-seat-info');
 
 const totalPriceSpan = document.getElementById('total-price');
 
+const grandTotal = document.getElementById('grand-total');
+
 let totalPrice = 0;
 
 for (const seatNumber of seatNumbers) {
@@ -42,6 +44,8 @@ for (const seatNumber of seatNumbers) {
             function updateTotalPrice(price) {
                 totalPrice += price;
                 totalPriceSpan.innerText = totalPrice;
+
+                grandTotal.innerText = totalPrice;
             }
             updateTotalPrice(550);
 
@@ -79,3 +83,8 @@ for (const seatNumber of seatNumbers) {
 
     })
 }
+
+
+// success modal
+
+
